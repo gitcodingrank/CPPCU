@@ -1,0 +1,4 @@
+Instalation of Compiler, IDE, and Executed hello world program in c++
+
+Compiler - g++ fileName.cpp -o exeFileName
+Run - ./exeFileName

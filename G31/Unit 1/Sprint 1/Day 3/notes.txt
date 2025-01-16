@@ -1,0 +1,1 @@
+Discussed about Memory Model and Different Computer Architecture.
