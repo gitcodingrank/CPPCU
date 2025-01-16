@@ -1,0 +1,4 @@
+Installation of Compiler, IDE, and learnt about compilation and execution of c++ program.
+
+Compilation: g++ program.cpp -o exeFileName
+Execution: ./exeFileName
