@@ -1,0 +1,1 @@
+Dicussed about Von Neumman Machine Architecture, Flynn's Classification of Computer, and Interpretor vs Compiler. 
