@@ -1,6 +1,6 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "array": "cpp"
+        "numbers": "cpp"
     }
 }

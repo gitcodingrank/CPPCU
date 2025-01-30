@@ -106,8 +106,6 @@ int main(){
             evenNums[index++] = numbers[i];
     }
 
-
-    
     for(int i=0;i<evenCount;i++){
             cout <<evenNums[i]<<" ";
          
