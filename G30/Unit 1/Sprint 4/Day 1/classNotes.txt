@@ -1,0 +1,73 @@
+Why Function:
+  
+    1
+    2
+    3
+    |
+    10
+    prime number logic with num - 45
+    11
+    12
+    13
+    |
+    |
+    21
+    prime number logic with num - 13
+    22
+    23
+    24
+    25
+    |
+    |
+    45
+    prime number logic with num - 11
+    46
+    47
+    48
+    |
+    |
+    |
+    75
+    prime number logic with num - 78
+    76
+    77
+    78
+    |
+    |
+    |
+    91
+    prime number logic with num - 23
+    92
+    93
+    |
+    |
+    |
+    100
+    prime number logic with num - 11
+
+
+    As in above code, your prime number logic is repeating again and again that is promoting dupicacy or redundancy in your code.
+
+    To reduce dulicacy and promote reusability, we can create a block of that repeated code.
+
+    primeNumber{
+      prime number logic
+    }
+    
+
+     Function: It is a block of code related to specific functionality/task, which is used to reuse that particular block of code again and again rather than writing from the sctrach.
+
+     Declartion of function in C++:
+     
+     Syntax:
+     data_type functionName(){
+       //block of code related to specific task.
+     }
+
+Function Parameters and Arguments:
+
+Function Parameters: They are function variables/parameters which are used within function only and we define at the time declaration of a function.
+
+Function Arguments: They are actual value/data that we pass to the function variables/parameters at the time calling a function.
+
+Note: Function can also return something using 'return' keyword

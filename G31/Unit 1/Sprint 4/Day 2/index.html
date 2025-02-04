@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hide and Show Functionality</title>
+</head>
+<body>
+    <input type="password">
+    <button>Show</button>
+</body>
+</html>
+
+<script>
+
+    //implement the password hide and show functionality
+    document.querySelector('button').addEventListener('click', function(){
+
+        let inputBox = document.querySelector('input');
+        // console.log(inputBox.type)
+        inputBox.type = inputBox.type =="text"?"password":"text"
+
+        let btn = document.querySelector('button')
+        btn.innerText = btn.innerText == "Show"?"Hide":"Show";
+
+    })
+
+
+    let students = [
+        {
+         name: "Nandini",
+         marks: 450,
+         stream: "Science"
+        },
+        {
+         name: "Ajay",
+         marks: 130,
+         stream: "Art"
+        },
+        {
+         name: "Reena",
+         marks:350,
+         stream: "Science"
+        },
+        {
+         name: "Mayank",
+         marks:150,
+         stream: "Commerce"
+        }
+    ]
+
+    //What to do: Find out the total sum of science student marks using Higher Order Function.
+    let total = students.filter(stu=>stu.stream=="Science").reduce((sum,stu)=>sum + stu.marks, 0)
+
+    console.log(total)
+
+</script>

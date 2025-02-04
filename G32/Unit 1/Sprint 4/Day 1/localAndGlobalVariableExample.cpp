@@ -9,15 +9,16 @@ void increaseCount(); //Function Prototype(Declaration)
 void decreaseCount(); //Function Prototype(Declaration)
 void resetCount(); //Function Prototype(Declaration)
 int getCount(); //Function Prototype(Declaration)
-void menu();
-void exit();
+void menu(); //Function Prototype(Declaration)
+void exit(); //Function Prototype(Declaration)
 
 
 int main(){
 
   //Local Variable
   string name = "Welcome to Counter Application";
-
+  cout <<name<<endl;
+  
   while(flag){
     menu();
     int choice;
