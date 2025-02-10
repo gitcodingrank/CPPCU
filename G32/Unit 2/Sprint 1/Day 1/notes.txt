@@ -1,0 +1,88 @@
+Object Oriented Programming.
+
+There are following Programming paradigm(style/way) supported by C++:
+1. Procedural Oriented Programming
+2. Functional Programming
+3. Object Oriented Programming.
+
+Why - Object Oriented Programming?
+
+-Everything in real world is object, and in each object two things are common:
+1. How they look? - properties/states/attributes
+2. How they act? - behaviors/features/functionalities
+
+Example:
+Real World Object: Mobile
+1. How they look? - properties/states/attributes
+    modelName
+    companyName
+    camera
+    color
+    RAM
+    Storage
+2. How they act? - behaviors/features/functionalities
+    doCall()
+    doMsg()
+    playVideo()
+    playMusic()
+    doVideoCall()
+
+Real World Object: Account
+1. How they look? - properties/states/attributes
+    accountHolderName
+    avaialableBalance
+    accountNumber
+    accountType
+    bankName
+    ifscCode
+2. How they act? - behaviors/features/functionalities
+    depositAmount()
+    withdrawAmout()
+    checkBalance()
+    checkLoanEligibility()
+
+Without Object Oriented, we're having to face lots of problem, let's see with the help of below example using procedure and functional programming.
+
+Example
+Problem Statement: Create an application which can take care about Bacnk Account Basic Functionalities.
+
+Solution:
+#include <iostream>
+using namespace std;
+//real world object: Bank Account
+//1. how it looks - properties/states/attributes
+double availableBalance = 0.0;
+string accountHolderName;
+string accountNumber;
+
+//2. how it acts - behaviors/functionalities/features
+string depositAmount(string accountNumber, double amount){
+        //write logic to deposit the amount
+}
+string withdrwaAmount(string accountNumber, double amount){
+    //write logic to withdraw the amount
+}
+double checkBalance(string accountNumber){
+    //write logic to check the current account balance
+}
+
+int main(){
+
+ //write code here
+
+}
+
+But in above code which was written using procedural and functional programming having following issues:
+
+1. Lack of Data Security/Hiding/Abstraction
+2. Lack of Reusability
+3. Lack of Modularity/Structured code
+
+But don't worry, Your Obejct Oriented Programming solves all above problems.
+How? - It keeps data(states/properties/arributes - how it looks) and related functions(how to acts - behaviors/functionalities/features) inside single object.
+
+Object Oriented Programming: It is one of the most popular programming paradigm(style/way) to develop real world application where object is the first citizen
+
+
+
+

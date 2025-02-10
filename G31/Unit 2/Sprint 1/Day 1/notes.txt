@@ -1,0 +1,87 @@
+Object Oriented Programming:
+
+C++ supports various programming paradigm(way or style), which are given below.
+1. Procedural Oriented Programming
+2. Functional Programming
+3. Object Oriented Programming.
+
+Why - Object Oriented Programming?
+
+In Real World, Everything is object, every object has two common things:
+1. How they look? - properties/attributes/states
+2. How they act? - features/functions/methods
+
+Example: 
+Real World Object: Mobile
+1. How they look? - properties/attributes/states
+    mobileModelName
+    brandName
+    backCamera
+    frontCamera
+    storage
+    RAM
+    display
+2. How they act? - features/functions/methods
+    playMusic()
+    watchNetflixSeries()
+    clickPhotos()
+    readNotes()
+
+Real World Object: Account
+1. How they look? - properties/attributes/states
+    accountHoderName
+    bankName
+    currentBalance
+    accountNumber
+    ifscCode
+    accountType
+2. How they act? - features/functions/methods
+    depositeAmount()
+    withdrwalAmount()
+    checkBalance()
+    checkLoanEligibility()
+
+To Understand, why do we need Object Oriented Programming, Check the blow example using functional and procedural oriented programming.
+
+Problem Statement: Create an application which can maintain the functionality around bank account.
+
+Solution:
+#include <iostream>
+using namespace std;
+
+//2. how it looks? - properties/attributes/states
+double balance=0;
+string accountNumber = "123456789";
+
+
+
+//object: account
+//1. how it acts? - functionalities/features/behaviors
+
+string depositMoney(string accountNumber, int amount){
+    //logic to deposit amount
+}
+
+string withdrawMoney(string accountNumber, int amount){
+    //logic to withdraw amount
+}
+
+string checkBalance(string accountNumber){
+    //logic to check amount
+}
+
+int main(){
+
+  //write code here
+
+}
+
+But in above, problem, our data and functions are seperatly written which are not good as per security and industry standard, such code can promote following issues.
+
+1. Lack of security/data hiding/abstraction
+2. Lack of Reusability
+3. Lack of modularity/structured
+
+Here, your Object Oriented Programming solves all above problems and promotoes object as first citizen to create real world application.
+
+Object Oriented Programming: It is one the most famous programming paradigm where you can keep functions/behaviors and properties/state inside one class and create multilple object, such code promotes Reusability, Security, and Modularity to build any real world applicaton.
