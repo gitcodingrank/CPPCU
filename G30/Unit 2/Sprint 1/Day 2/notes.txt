@@ -1,0 +1,99 @@
+Object Oriented Programming
+
+C++ supports following types of programming paradigm(style/way):
+1. Procedural Oriented Programming
+2. Fungrammingctional Programming
+3. Object Oriented Pro
+
+As you know, in real world, Everything is object, and every real world object has two common things:
+1. How it looks - properties/attributes/states
+2. How it acts - behaviors/functionalities/features
+
+Example: 
+Real World Object: Mobile
+1. How it looks - properties/attributes/states
+    brandName
+    modelName
+    battery
+    camera(backCamera/frontCamera)
+    storage
+    RAM
+    screenSize
+2. How it acts - behaviors/functionalities/features
+    playMusic()
+    doCall()
+    doMsgs()
+    clickPhotos()
+    writeNotes()
+
+Example: 
+Real World Object: Bank Account
+1. How it looks - properties/attributes/states
+    accountHolderName
+    availableBalance
+    accountNumber
+    bankName
+    accountType
+    ifscCode
+    adhaarNumber
+    panNumber
+
+2. How it acts - behaviors/functionalities/features
+    depositAmout()
+    withdrwaAmout()
+    checkBalance()
+    checkLoanEligiblity()
+
+Example: Without using obejct oriented programming - where we will use Procedural and Functional Programming
+
+Problem Statement: Create an application which can take care all the basic functionalities of Bank Account.
+
+Solutions:
+#include <iostream>
+using namespace std;
+
+//Real World Object: Bank Account
+//1. How it looks - properties/attributes/states - data
+string accountHolderName;
+string accountNumber;
+double availableBalance = 0.0;
+
+
+//2. How it acts - behaviors/functionalities/features - functions
+
+string depositAmount(string accountNumber, double amount){
+    //logic to deposit the amount
+}
+
+string withdrawAmount(string accountNumber, double amount){
+    //logic to withdraw the amount
+}
+
+double checkBalance(string accountNumber){
+    //logic to check the current available amount
+}
+
+
+int main(){
+
+   //Object Oriented Programming
+
+}
+
+In above code, you've used Procedural and Functional Programming to achive functionalities related to Bank Account, but this codes have following issues.
+
+1. Lack of Security/Data Hiding/Abstraction
+2. Lack of Reusabliity
+3. Lack Modularity/Structured code.
+
+int data = 45; // Not Modularity
+
+{
+    int data = 45; // Modular
+}
+
+Object Oriented Programming solves all above problems by keeping real world object's states(how it looks - properties/attributes) and behaviors(how it acts - functionalities/features) in one object/entity.
+
+Object Oriented Programming - It is one of most popular programming paradigm to develop any real world application where first citizen is object and it promotes Reusabliity, Modularity, and Abstraction.
+
+
