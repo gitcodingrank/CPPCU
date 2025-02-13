@@ -1,0 +1,65 @@
+
+#include <iostream>
+using namespace std;
+int main() {
+    int R, C, K;
+    cin >>R>>C;
+    
+    int nums[R][C];
+    
+    //adding the element to the nums array:
+    for(int i=0;i<R;i++){
+        for(int j = 0;j<C;j++){
+            cin >> nums[i][j];
+        }
+    }
+    cin>>K;
+    
+    //Find the index of K element.
+    int row = -1, column = -1;
+    for(int i=0;i<R;i++){
+        for(int j = 0;j<C;j++){
+            if(nums[i][j]==K){
+              row = i;
+              column = j;
+              break;
+            }
+        }
+    }
+    
+    //left to right
+    int i = row;
+    int j = column;
+    
+    while(i > 0 && j > 0){
+      i--;
+      j--;
+    }
+    
+    //printing the element
+    while(i <R && j<C){
+      cout <<nums[i][j]<<" ";
+      i++;
+      j++;
+    }
+    
+    cout <<endl;
+    
+    //right to left
+    i = row;
+    j = column;
+    while(i > 0 && j < C-1){
+      i--;
+      j++;
+    }
+    
+    //printing the elements:
+    while(i < R && j >= 0){
+      cout << nums[i][j]<<" ";
+      i++;
+      j--;
+    }
+  
+    
+  
+}
