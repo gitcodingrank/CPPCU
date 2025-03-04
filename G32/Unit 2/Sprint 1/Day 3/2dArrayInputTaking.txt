@@ -1,0 +1,37 @@
+
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+    int tc;
+    cin >> tc;
+    
+    while(tc--!=0){
+      int R, C;
+      cin>>R>>C;
+      
+      // int nums[R][C];
+      vector<vector<int>> nums(R, vector<int>(C));
+      
+      //adding the input to the array.
+      for(int i=0;i<R;i++){
+          
+          for(int j=0;j<C;j++){
+            cin >>nums[i][j];
+          }
+      }
+      
+      //Logic
+      //printing the elements
+      for(int i=0;i<R;i++){
+          
+          for(int j=0;j<C;j++){
+            cout<<nums[i][j]<<" ";
+          }
+          cout <<endl;
+      }
+      cout <<"--------------------------"<<endl;
+    
+    }
+    
+}
