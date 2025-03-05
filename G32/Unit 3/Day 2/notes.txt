@@ -1,0 +1,13 @@
+There are two types of member of the class:
+1. Non-Static Members
+    1.1 Non-Static Data Member(State/Variable/property/attribute-how it looks)
+    1.2 Non-Static Function Member(Behavior/Method/-how it acts)
+2. Static Members
+    2.1 Static Data Member(State/Variable/property/attribute-how it looks)
+    2.2 Static Function Member(Behavior/Method/-how it acts)
+
+1. Non-Static Members:
+-They belong to the specific object of the class, meaning that to access/manipulate with non-static members of the class, you need to create the object.
+
+2. Static Members:
+-They belong to the class not to any specific object, for accessing/manipulatating with static member, you don't need to create the object of the class.
