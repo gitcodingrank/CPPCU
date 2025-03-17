@@ -1,0 +1,10 @@
+AFTER ST-1: 
+ST-2: OBJECT ORIENTED PROGRAMMING + FILE HANDLING.
+1. CLASS, OBJECT
+2. Member of the class:
+    2.1 Static and Non-Static Member - Assignment Released
+    2.2 Constant Members - Not Given Assignment
+    2.3 Access Modifier/Specifier/Friend Class/Function - Assignment Released
+3. Constructor and Destructor [Done]
+4. Overloading
+5. Type Conversion

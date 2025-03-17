@@ -1,0 +1,26 @@
+AFTER ST - 1:
+ST - 2: OBJECT ORIENTED PROGRAMMING
+1. Class and Object
+2. Class Members
+    2.1 Static and Non-Static Members
+    2.2 Constant Members
+    2.3 Access Modifiers/Specifiers, Friend Function/Class.
+    2.4 Constructor/Destructor
+3. Overloading - Constructor/Function/Operator Overloading
+
+
+class A{
+    public:
+    int value;
+
+    friend ostream operator op(){
+
+    }
+
+}
+
+int main(){
+
+    A a;
+    cout <<a.value<<endl;
+}
