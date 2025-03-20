@@ -1,0 +1,23 @@
+Encapsulation: Process of making the members of class as private.
+Inheritance: One class can access the members of other class.
+Type of Inheritance:
+1. Single Inheritance
+Class A 
+  |
+Class B
+2. Multiple Inheritace
+Class A 
+Class B
+Class C --> class A and class B
+3. Multilevel Inheritace
+Class A 
+  |
+Class B 
+  |
+Class C
+4. Hierarchical Inheritace
+          class A 
+       /            \
+   Class B        Class C
+  /                      \
+ Class D             class E

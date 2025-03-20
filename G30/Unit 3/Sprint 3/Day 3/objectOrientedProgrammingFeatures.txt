@@ -1,0 +1,5 @@
+To Develop any real world application using object oriented programming, then as a developer it is important to have the knowledge oops features:
+1. Encapsulation [Done]
+2. Inheritance 
+3. Polymorphism
+4. Abstraction
