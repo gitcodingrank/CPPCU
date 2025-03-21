@@ -1,0 +1,65 @@
+Object Oriented Programming:
+1. Class Memebers
+2. Type Conversion
+3. Overloading
+4. Features:
+    4.1 Encapsulation
+    4.2 Inheritance
+    4.3 Polymophism
+    4.4 Abstraction
+
+
+Problem Statement:
+🎯 Student Task: Banking System
+
+💡 Task Description:
+
+Create a Bank Account system using C++ encapsulation and Inheritance where:
+
+1. The account balance is private and cannot be accessed directly.
+2. Users can deposit money, but only if the amount is positive.
+3. Users can withdraw money, but only if they have sufficient balance.
+4. The system should display the account holder's name and balance.
+
+📝 Task Requirements
+
+- Use a class named `BankAccount` with private variables:
+    - `accountHolder` (string)
+    - `balance` (double)
+- Implement getter and setter functions:
+    - `deposit(double amount)` → Adds money if amount > 0
+    - `withdraw(double amount)` → Deducts money if balance is sufficient
+    - `getBalance()` → Returns the account balance
+- Create a menu-driven program to interact with the user.
+
+✅ Expected Output
+
+Welcome to the Bank System!
+
+Enter Account Holder Name: Alice
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Exit
+
+Enter choice: 1
+Enter deposit amount: 500
+Deposit Successful!
+
+Enter choice: 2
+Enter withdrawal amount: 200
+Withdrawal Successful!
+
+Enter choice: 3
+Current Balance: 300
+
+Enter choice: 4
+Thank you for using our Bank System!
+
+🧠 Bonus Challenge
+
+1. Implement multiple accounts.
+2. Add a PIN system for security.
+3. Display transaction history.
