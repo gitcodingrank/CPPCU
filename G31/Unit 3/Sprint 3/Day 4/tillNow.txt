@@ -63,3 +63,119 @@ Thank you for using our Bank System!
 1. Implement multiple accounts.
 2. Add a PIN system for security.
 3. Display transaction history.
+
+Expected Output:
+Enter the number of bank accounts to create: 2
+
+Enter details for Account 1
+Account Holder Name: Rakesh 
+Enter Initial Balance: 200
+Set a 4-digit PIN: 1234
+
+Enter details for Account 2
+Account Holder Name: Pawan
+Enter Initial Balance: 0
+Set a 4-digit PIN: 12345
+
+Select an account (1-2): 1
+Enter PIN: 12345
+Incorrect PIN! Try again.
+
+Select an account (1-2): 1
+Enter PIN: 1234
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 1
+Enter deposit amount: 300
+Deposit Successful! New Balance: $500
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 3
+Current Balance: $500
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 4
+
+Transaction History for Rakesh:
+Deposited: $300.000000
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 2
+Enter withdrawal amount: 100
+Withdrawal Successful! New Balance: $400
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 2
+Enter withdrawal amount: 100
+Withdrawal Successful! New Balance: $300
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 4
+
+Transaction History for Rakesh:
+Deposited: $300.000000
+Withdrew: $100.000000
+Withdrew: $100.000000
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 5
+Switching account...
+
+Select an account (1-2): 2
+Enter PIN: 123456
+Incorrect PIN! Try again.
+
+Select an account (1-2): 2
+Enter PIN: 12345
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 6
+Thank you for using our Bank System!

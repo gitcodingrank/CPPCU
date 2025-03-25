@@ -63,3 +63,174 @@ Thank you for using our Bank System!
 1. Implement multiple accounts.
 2. Add a PIN system for security.
 3. Display transaction history.
+
+Expected Output:
+Enter the number of bank accounts to create: 2
+
+Enter details for Account 1
+Account Holder Name: Chintu
+Enter Initial Balance: 500
+Set a 4-digit PIN: 1234
+
+Enter details for Account 2
+Account Holder Name: Chaman
+Enter Initial Balance: 1000
+Set a 4-digit PIN: 12345
+
+Select an account (1-2): 1
+Enter PIN: 12345
+Incorrect PIN! Try again.
+
+Select an account (1-2): 12345
+Invalid account selection!
+
+Select an account (1-2): 1
+Enter PIN: 1234
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 1
+Enter deposit amount: 5000
+Deposit Successful! New Balance: $5500
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 1
+Enter deposit amount: 3000
+Deposit Successful! New Balance: $8500
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 2
+Enter withdrawal amount: 15000
+Insufficient balance or invalid amount!
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 2
+Enter withdrawal amount: 5000
+Withdrawal Successful! New Balance: $3500
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 1
+Enter deposit amount: 2000
+Deposit Successful! New Balance: $5500
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 4
+
+Transaction History for Chintu:
+Deposited: $5000.000000
+Deposited: $3000.000000
+Withdrew: $5000.000000
+Deposited: $2000.000000
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 3
+Current Balance: $5500
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 5
+Switching account...
+
+Select an account (1-2): 2
+Enter PIN: 12345
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 3
+Current Balance: $1000
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 1
+Enter deposit amount: 500
+Deposit Successful! New Balance: $1500
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 2
+Enter withdrawal amount: 300
+Withdrawal Successful! New Balance: $1200
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 4
+
+Transaction History for Chaman:
+Deposited: $500.000000
+Withdrew: $300.000000
+
+Choose an option:
+1. Deposit Money
+2. Withdraw Money
+3. Check Balance
+4. Show Transaction History
+5. Switch Account
+6. Exit
+Enter choice: 6
+Thank you for using our Bank System!
