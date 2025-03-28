@@ -69,6 +69,8 @@ Thank you for using the application!
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
+
 using namespace std;
 
 class Book{
@@ -116,7 +118,7 @@ class Book{
 
     string toString(){
         //342323,Book1,Author1,Available
-        return this->bookId + "," +this->bookName+", "+this->authorName + "," + this->status;
+        return to_string(this->bookId) + "," +this->bookName+", "+this->authorName + "," + this->status;
     }
 };
 
@@ -144,7 +146,32 @@ class BookServiceImpl: public BookService{
         
     }
     Book getBookById(int bookId)override{
-        return Book();
+        
+        ifstream file("library.txt");
+        if(!file.is_open()){
+            cout <<"Error While Opening the File"<<endl;
+        }
+        string line;
+        Book book;
+        while(getline(file, line)){
+            stringstream ss(line);
+
+            string id;
+            string title, author, status;
+            getline(ss, id, ',');
+            getline(ss, title, ',');
+            getline(ss, author, ',');
+            getline(ss, status, ',');
+
+            if(stoi(id)==bookId){
+                book.setBookId(stoi(id));
+                book.setBookName(title);
+                book.setBookName(title);
+                book.setAuthorName(author);
+                book.setStatus(status);
+            }
+        }
+        return book;
     }
     void getAllBooks()override{
 
@@ -185,11 +212,33 @@ class BookUI{
         cout <<"Enter Book Author Name: ";
         getline(cin, author);
 
+        cout <<"Id is: "<<id<<endl;
         Book newBook = Book(id, title, author);
 
         BookService *bookService = new BookServiceImpl();
         cout <<"--------------------------------------------"<<endl;
         cout <<bookService->addBook(newBook)<<endl;
+        cout <<"--------------------------------------------"<<endl;
+    }
+
+    static void bookById(){
+        int id;
+        
+        cout <<"Enter Book Id: ";
+        cin >> id;
+
+        BookService *bookService = new BookServiceImpl();
+
+        Book book = bookService->getBookById(id);
+        if(book.getBookId()!=id){
+            cout <<"======================================"<<endl;
+            cout <<"Invalid Book Id"<<endl;
+            cout <<"======================================"<<endl;
+            return;
+        }
+
+        cout <<"--------------------------------------------"<<endl;
+        cout <<"Id: "<<book.getBookId()<<" Name: "<<book.getAuthorName()<<" Author: "<<book.getAuthorName()<<" Available: "<<book.getStatus()<<endl;
         cout <<"--------------------------------------------"<<endl;
     }
 };
@@ -211,7 +260,7 @@ int main(){
             BookUI::addNewBook();
             break;
         case 2:
-            //get book by id
+            BookUI::bookById();
             break;
         case 3:
             //get All Books
