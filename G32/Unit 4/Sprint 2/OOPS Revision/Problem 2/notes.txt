@@ -1,0 +1,141 @@
+### **Problem 2: Robotics Control System using Virtual Base Class**
+
+You are designing a **Robotics Control System** that categorizes robots based on their **functionality** and **energy source**. The system should use **virtual base classes** to avoid redundant data.
+
+---
+
+### **Class Hierarchy to Create:**
+
+- **Robot** (Base Class - *Virtual*):
+    
+    Stores:
+    
+    - `model_name`
+    - `weight`
+- **Functionality** (Derived from Robot):
+    
+    Stores:
+    
+    - `task_type` (e.g., Industrial, Medical, Military)
+- **EnergySource** (Derived from Robot):
+    
+    Stores:
+    
+    - `energy_type` (e.g., Electric, Solar, Nuclear)
+- **SmartRobot** (Derived from **Functionality** and **EnergySource**):
+    
+    Stores:
+    
+    - `AI_enabled` flag (Yes or No)
+        
+        Displays:
+        
+    - Complete robot details
+
+Note: Your program should allow inputting multiple **SmartRobot** details and display them.
+
+---
+
+### **Input Format:**
+
+1. The first line contains an integer N – the number of robots.
+2. The next **N** lines contain robot details in the format:
+
+```
+model_name weight task_type energy_type AI_enabled
+```
+
+Where:
+
+- `model_name`: Alphanumeric (max length 20)
+- `weight`: Integer in kg
+- `task_type`: One of `Industrial`, `Medical`, `Military`, `Exploration`
+- `energy_type`: One of `Electric`, `Solar`, `Nuclear`
+- `AI_enabled`: Either `Yes` or `No`
+
+---
+
+### **Output Format:**
+
+For each **Smart Robot**, print the following:
+
+```
+Smart Robot Details:
+Model Name: <model_name>
+Weight: <weight> kg
+Task Type: <task_type>
+Energy Source: <energy_type>
+AI Enabled: <Yes/No>
+```
+
+Each robot's details should be printed **separately**.
+
+---
+
+### **Constraints:**
+
+- 1≤N≤100
+- 1≤weight≤1000 Kg
+- `model_name`: Alphanumeric string (max length 20)
+- `task_type`: Must be one of the predefined options
+- `energy_type`: Must be one of the predefined options
+- `AI_enabled`: Yes / No
+
+---
+
+### **Sample Test Cases:**
+
+---
+
+**Test Case 1 (Basic Test Case)**
+
+**Input:**
+
+```
+1
+XJ-900 250 Industrial Electric Yes
+```
+
+**Output:**
+
+```
+Smart Robot Details:
+Model Name: XJ-900
+Weight: 250 kg
+Task Type: Industrial
+Energy Source: Electric
+AI Enabled: Yes
+```
+
+**Explanation:**
+
+- The robot XJ-900 weighs 250 kg, is used in Industrial tasks, runs on Electric power, and has AI capability.
+
+---
+
+**Test Case 2 (Multiple Robots)**
+
+**Input:**
+
+```
+2
+RX-500 150 Medical Solar No
+WQ-2000 500 Military Nuclear Yes
+```
+
+**Output:**
+
+```
+Smart Robot Details:
+Model Name: RX-500
+Weight: 150 kg
+Task Type: Medical
+Energy Source: Solar
+AI Enabled: No
+Smart Robot Details:
+Model Name: WQ-2000
+Weight: 500 kg
+Task Type: Military
+Energy Source: Nuclear
+AI Enabled: Yes
+```
