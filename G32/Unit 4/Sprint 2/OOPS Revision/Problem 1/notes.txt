@@ -1,0 +1,128 @@
+## Problem 1: Smart Home Device Management Using Virtual Functions
+
+You are developing a **Smart Home Device Management System** where multiple types of smart devices (e.g., Smart Lights, Smart Locks, and Smart Thermostats) are controlled. The system should use **virtual functions** to ensure each device type implements its own method of displaying information dynamically.
+
+Create the following **class hierarchy**:
+
+- **SmartDevice (Base Class - Abstract Class)**
+    
+    Stores `device ID` and provides a **pure virtual function** `displayInfo()`.
+    
+- **SmartLight (Derived from SmartDevice)**
+    
+    Stores **brightness level** (0–100%) and overrides `displayInfo()`.
+    
+- **SmartLock (Derived from SmartDevice)**
+    
+    Stores **lock status** (Locked/Unlocked) and overrides `displayInfo()`.
+    
+- **SmartThermostat (Derived from SmartDevice)**
+    
+    Stores **current temperature** (in °C) and overrides `displayInfo()`.
+    
+
+Your program should allow **inputting multiple Smart Devices** and display them **dynamically using virtual functions**.
+
+---
+
+### Input Format:
+
+- The first line contains an integer `N` (number of smart devices).
+- The next `N` lines contain details in the format:
+
+```
+device_type device_ID additional_info
+```
+
+Where:
+
+- `device_type`: `"Light"`, `"Lock"`, or `"Thermostat"`
+- `device_ID`: Alphanumeric string (max length 10)
+- `additional_info`:
+    - If `Light`, enter **brightness level** (0–100%)
+    - If `Lock`, enter `"Locked"` or `"Unlocked"`
+    - If `Thermostat`, enter **temperature** in Celsius
+
+---
+
+### Output Format:
+
+For each Smart Device, print:
+
+```
+Smart Device Details:
+Device ID: <device_ID>
+<Specific Details>
+```
+
+Each device's details should be printed separately.
+
+---
+
+### Constraints:
+
+- `1 ≤ N ≤ 100`
+- `device_ID` is an alphanumeric string (max length 10).
+- **brightness level**: `0 ≤ level ≤ 100`
+- **lock status**: `"Locked"` or `"Unlocked"`
+- **temperature**: `50 ≤ temperature ≤ 50 (in °C)`
+
+---
+
+### Sample Test Cases:
+
+### Test Case 1: Basic Test Case
+
+**Input:**
+
+```
+1
+Light D123 75
+```
+
+**Output:**
+
+```
+Smart Device Details:
+Device ID: D123
+Brightness Level: 75%
+```
+
+**Explanation:**
+
+• The smart light `D123` has a brightness level of 75%.
+
+---
+
+### Test Case 2: Multiple Devices
+
+**Input:**
+
+```
+3
+Lock S567 Locked
+Thermostat T890 22
+Light L345 40
+```
+
+**Output:**
+
+```
+Smart Device Details:
+Device ID: S567
+Lock Status: Locked
+Smart Device Details:
+Device ID: T890
+Current Temperature: 22°C
+Smart Device Details:
+Device ID: L345
+Brightness Level: 40%
+```
+
+**Explanation:**
+
+• The `S567` smart lock is Locked.
+
+• The `T890` smart thermostat is set at 22°C.
+
+• The `L345` smart light is at 40% brightness.
