@@ -1,0 +1,112 @@
+### **Problem 3: Smart Home Appliance Control using Virtual Base Class**
+
+You need to implement a **Smart Home Appliance Control System** using **Virtual Base Class** in C++.
+
+Create a base class `Appliance` that stores common attributes like:
+
+- `brand`
+- `power` consumption (in watts)
+
+Then, create two intermediate derived classes:
+
+- `WiredDevice`: Stores `voltage` rating (in volts)
+- `WirelessDevice`: Stores `network_type` (WiFi/Bluetooth)
+
+Finally, create a derived class `SmartAppliance` that inherits both `WiredDevice` and `WirelessDevice`. This class should avoid multiple copies of `Appliance` attributes using **virtual inheritance**.
+
+Your program should allow users to **enter smart appliance details** and **display them**.
+
+---
+
+### **Input Format**
+
+- The first line contains an integer `N` (number of smart appliances).
+- Each of the next `N` lines contains details in the format:
+    
+    ```
+    brand power voltage network_type
+    ```
+    
+
+---
+
+### **Output Format**
+
+For each Smart Appliance, print:
+
+```
+Smart Appliance Details:
+Brand: <brand>
+Power: <power> W
+Voltage: <voltage> V
+Network Type: <network_type>
+```
+
+Each appliance's details should be printed **separately**.
+
+---
+
+### 📌 **Constraints**
+
+- 1≤N≤100 (Number of appliances)
+- 10≤power≤5000 (in watts)
+- 110≤voltage≤240 (voltage rating)
+- `network_type` can be **WiFi** or **Bluetooth** only.
+- `brand` contains only **lowercase English letters** (max length 20).
+
+---
+
+### ✅ **Sample Test Cases**
+
+### **Test Case 1 (Basic Test Case)**
+
+**Input:**
+
+```
+1
+samsung 1000 220 WiFi
+```
+
+**Output:**
+
+```
+Smart Appliance Details:
+Brand: samsung
+Power: 1000 W
+Voltage: 220 V
+Network Type: WiFi
+```
+
+**Explanation:**
+
+- The given appliance is a **Samsung** device that consumes **1000 watts** of power.
+- It operates on **220V** and connects via **WiFi**.
+
+---
+
+### **Test Case 2 (Multiple Appliances)**
+
+**Input:**
+
+```
+2
+Ig 1500 110 Bluetooth
+sony 2000 240 WiFi
+```
+
+**Output:**
+
+```
+Smart Appliance Details:
+Brand: Ig
+Power: 1500 W
+Voltage: 110 V
+Network Type: Bluetooth
+
+Smart Appliance Details:
+Brand: sony
+Power: 2000 W
+Voltage: 240 V
+Network Type: WiFi
+```
+---
