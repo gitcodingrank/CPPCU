@@ -1,0 +1,108 @@
+### **Problem 4: Smart Payment System Using Polymorphism**
+
+You are developing a Smart Payment System that supports multiple payment methods (Credit Card, Digital Wallet, and UPI). The system should use polymorphism to handle different payment methods dynamically.
+
+Create the following class hierarchy:
+
+1. **Payment** (Base Class - Abstract Class): Stores transaction ID and provides a pure virtual function `processPayment()`.
+2. **CreditCard** (Derived from Payment): Stores card number (last 4 digits) and overrides `processPayment()`.
+3. **DigitalWallet** (Derived from Payment): Stores wallet provider (PayPal, Paytm, Google Pay, etc.) and overrides `processPayment()`.
+4. **UPI** (Derived from Payment): Stores UPI ID and overrides `processPayment()`.
+
+Your program should allow inputting multiple payment transactions and display their details dynamically using polymorphism.
+
+---
+
+### **Input Format:**
+
+- The first line contains an integer `N` (number of payment transactions).
+- The next `N` lines contain details in the format:
+
+```
+payment_type transaction_ID additional_info
+```
+
+- `payment_type`: "CreditCard", "DigitalWallet", or "UPI"
+- `transaction_ID`: Alphanumeric string (max length 12)
+- `additional_info`:
+    - If `CreditCard`, enter last 4 digits of the card.
+    - If `DigitalWallet`, enter wallet provider (PayPal, Paytm, Google Pay, etc.).
+    - If `UPI`, enter UPI ID.
+
+---
+
+### **Output Format:**
+
+For each Payment Transaction, print:
+
+```
+Payment Details:
+Transaction ID: <transaction_ID>
+<Specific Details>
+```
+
+Each transaction's details should be printed separately.
+
+---
+
+### **Constraints:**
+
+- `1 ≤ N ≤ 100`
+- `transaction_ID` is an alphanumeric string (max length 12).
+- `card number`: 4-digit number (`1000 ≤ number ≤ 9999`).
+- `wallet provider`: Alphanumeric string (max length 15).
+- `UPI ID`: Alphanumeric string (max length 20).
+
+---
+
+### **Sample Test Cases**
+
+### **Test Case 1 (Basic Test Case)**
+
+**Input:**
+
+```
+1
+CreditCard TXN123 5678
+```
+
+**Output:**
+
+```
+Payment Details:
+Transaction ID: TXN123
+Credit Card Last 4 Digits: 5678
+```
+
+**Explanation:**
+
+- The payment `TXN123` was made using a Credit Card with last 4 digits `5678`.
+
+---
+
+### **Test Case 2 (Multiple Transactions)**
+
+**Input:**
+
+```
+3
+UPI TXN789 abc@upi
+DigitalWallet TXN456 Paytm
+CreditCard TXN999 4321
+```
+
+**Output:**
+
+```
+Payment Details:
+Transaction ID: TXN789
+UPI ID: abc@upi
+
+Payment Details:
+Transaction ID: TXN456
+Digital Wallet Provider: Paytm
+
+Payment Details:
+Transaction ID: TXN999
+Credit Card Last 4 Digits: 4321
+```

@@ -1,0 +1,124 @@
+---
+
+### **Problem 5:** Vehicle Management System Using Inheritance
+
+ ****You need to design a Vehicle Management System using hierarchical inheritance. Implement a base class `Vehicle` that defines common vehicle properties. Then, derive two subclasses:
+
+- **Car**: Represents a car with attributes: model name, fuel capacity (in liters), mileage (km per liter), and seating capacity.
+- **Bike**: Represents a bike with attributes: model name, engine capacity (cc), mileage (km per liter), and type (sports/cruiser).
+
+Your program should allow users to store vehicle details and display them.
+
+**Input Format:**
+
+- The first line contains an integer `N` (number of vehicles).
+- Each of the next `N` lines contains:
+    - `"car model fuel_capacity mileage seating_capacity"` (for cars)
+    - `"bike model engine_capacity mileage type"` (for bikes)
+
+**Output Format:**
+
+1. For each **Car**, output:
+    
+    ```
+    Vehicle Type: Car
+    Model: <model>
+    Fuel Capacity: <fuel_capacity> L
+    Mileage: <mileage> km/l
+    Seating Capacity: <seating_capacity>
+    ```
+    
+2. For each **Bike**, output:
+    
+    ```
+    Vehicle Type: Bike
+    Model: <model>
+    Engine Capacity: <engine_capacity> cc
+    Mileage: <mileage> km/l
+    Type: <type>
+    ```
+    
+
+Each vehicle's details should be printed separately.
+
+**Constraints:**
+
+- `1 ≤ N ≤ 100` (Number of vehicles)
+- `5 ≤ fuel_capacity ≤ 100` (for cars)
+- `50 ≤ engine_capacity ≤ 2000` (for bikes)
+- `5 ≤ mileage ≤ 50` (for both cars and bikes)
+- `2 ≤ seating_capacity ≤ 7` (for cars)
+- `type` can be either "sports" or "cruiser" (for bikes).
+- Model names contain only lowercase English letters and numbers.
+
+**Sample Test Cases**
+
+**Test Case 1** (Basic Test with One Car and One Bike)
+
+**Input:**
+
+```
+2
+car swift 45 20 5
+bike ninja 650 25 sports
+```
+
+**Output:**
+
+```
+Vehicle Type: Car
+Model: swift
+Fuel Capacity: 45 L
+Mileage: 20 km/l
+Seating Capacity: 5
+
+Vehicle Type: Bike
+Model: ninja
+Engine Capacity: 650 cc
+Mileage: 25 km/l
+Type: sports
+```
+
+**Explanation:**
+
+- Car `swift` has fuel capacity 45L, mileage 20 km/l, seating for 5.
+- Bike `ninja` has engine capacity 650cc, mileage 25 km/l, type sports.
+
+---
+
+**Test Case 2** (Multiple Vehicles)
+
+**Input:**
+
+```
+3
+car tesla 80 30 5
+bike ducati 1200 18 sports
+car bmw 60 22 4
+```
+
+**Output:**
+
+```
+Vehicle Type: Car
+Model: tesla
+Fuel Capacity: 80 L
+Mileage: 30 km/l
+Seating Capacity: 5
+
+Vehicle Type: Bike
+Model: ducati
+Engine Capacity: 1200 cc
+Mileage: 18 km/l
+Type: sports
+
+Vehicle Type: Car
+Model: bmw
+Fuel Capacity: 60 L
+Mileage: 22 km/l
+Seating Capacity: 4
+```
+
+[Solution](https://www.notion.so/Solution-1d89ea19b39780549c7bd8c3078ccddd?pvs=21)
+
+---
