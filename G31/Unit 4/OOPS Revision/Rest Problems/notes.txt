@@ -1,0 +1,517 @@
+### **Problem 6: Advanced Shape Hierarchy with Multiple Inheritance**
+
+Design a class hierarchy to represent different types of shapes using multiple inheritance. Implement a base class `Shape` with a pure virtual function `area()`. Derive two classes, `Rectangle` and `Circle`, from `Shape`. Additionally, create a class `Colored` that adds a color attribute. Finally, derive classes `ColoredRectangle` and `ColoredCircle` that inherit from both `Rectangle` and `Colored`, and `Circle` and `Colored`, respectively.
+
+The program should read the details of multiple shapes from input, calculate their area, and display their properties, including color, dimensions, and computed area.
+
+---
+
+### **Input Format:**
+
+- The first line contains an integer **N** (number of shapes).
+- The next **N** lines contain details of each shape in the following format:
+    - `"rectangle width height color"` (for rectangles)
+    - `"circle radius color"` (for circles)
+
+---
+
+### **Output Format:**
+
+For each shape, output:
+
+```
+Shape: <Type>, Color: <Color>
+Dimensions of the shape:
+For Rectangles: Width: <width>, Height: <height>
+For Circles: Radius: <radius>
+Area: <computed area> (formatted to two decimal places)
+```
+
+Each shape's details should be printed separately.
+
+---
+
+### **Constraints:**
+
+- 1≤N≤100 (Number of shapes)
+- 1.0≤width,height,radius≤1000.0
+- Color is a non-empty string containing only lowercase English letters.
+
+---
+
+### **Sample Test Cases:**
+
+### **Test Case 1 (Basic Test with One Rectangle and One Circle):**
+
+**Input:**
+
+```
+2
+rectangle 5.0 10.0 green
+circle 4.0 yellow
+```
+
+**Output:**
+
+```
+Shape: Rectangle, Color: green
+Width: 5.00, Height: 10.00
+Area: 50.00
+Shape: Circle, Color: yellow
+Radius: 4.00
+Area: 50.27
+```
+
+**Explanation:**
+
+- A rectangle with width = 5.0 and height = 10.0 has an area of 50.00 (5 × 10 = 50.00).
+- A circle with radius = 4.0 has an area of approximately 50.27 (π×42≈50.27\pi \times 4^2 \approx 50.27).
+
+---
+
+### **Test Case 2 (Multiple Rectangles with Different Colors):**
+
+**Input:**
+
+```
+3
+rectangle 3.5 2.0 red
+rectangle 6.0 7.5 blue
+circle 2.5 orange
+```
+
+**Output:**
+
+```
+Shape: Rectangle, Color: red
+Width: 3.50, Height: 2.00
+Area: 7.00
+Shape: Rectangle, Color: blue
+Width: 6.00, Height: 7.50
+Area: 45.00
+Shape: Circle, Color: orange
+Radius: 2.50
+Area: 19.63
+```
+
+**Explanation:**
+
+- The first rectangle has width = 3.5 and height = 2.0, so its area is 7.00 (3.5 × 2.0).
+- The second rectangle has width = 6.0 and height = 7.5, so its area is 45.00 (6.0 × 7.5).
+- The circle has radius = 2.5, so its area is approximately 19.63 (π×2.52≈19.63\pi \times 2.5^2 \approx 19.63).
+
+---
+
+### **Test Case 3 (Edge Case with Large Values):**
+
+**Input:**
+
+```
+2
+rectangle 1000.0 500.0 black
+circle 100.0 white
+```
+
+**Output:**
+
+```
+Shape: Rectangle, Color: black
+Width: 1000.00, Height: 500.00
+Area: 500000.00
+Shape: Circle, Color: white
+Radius: 100.00
+Area: 31415.93
+```
+---
+
+### **Problem 7: Vehicle Management System Using Inheritance**
+
+You need to design a Vehicle Management System using hierarchical inheritance. Implement a base class `Vehicle` that defines common vehicle properties. Then, derive two subclasses:
+
+- **Car**: Represents a car with attributes:
+    
+    `model name`, `fuel capacity` (in liters), `mileage` (km per liter), and `seating capacity`.
+    
+- **Bike**: Represents a bike with attributes:
+    
+    `model name`, `engine capacity` (cc), `mileage` (km per liter), and `type` (`sports/cruiser`).
+    
+
+Your program should allow users to store vehicle details and display them.
+
+---
+
+### **Input Format:**
+
+- The first line contains an integer `N` (number of vehicles).
+- Each of the next `V` lines contains:
+    
+    `"car model fuel_capacity mileage seating_capacity"` (for cars)
+    
+    `"bike model engine_capacity mileage type"` (for bikes)
+    
+
+---
+
+### **Output Format:**
+
+1. For each Car, output:
+    
+    ```
+    Vehicle Type: Car
+    Model: <model>
+    Fuel Capacity: <fuel_capacity> L
+    Mileage: <mileage> km/l
+    Seating Capacity: <seating_capacity>
+    ```
+    
+2. For each Bike, output:
+    
+    ```
+    Vehicle Type: Bike
+    Model: <model>
+    Engine Capacity: <engine_capacity> cc
+    Mileage: <mileage> km/l
+    Type: <type>
+    ```
+    
+
+Each vehicle's details should be printed separately.
+
+---
+
+### **Constraints:**
+
+- 1≤N≤100 *(Number of vehicles)*
+- 5≤fuel_capacity≤100 (*for cars)*
+- 50≤engine_capacity≤2000 *(for bikes)*
+- 5≤mileage≤50 *(for both cars and bikes)*
+- 2≤seating_capacity≤7 *(for cars)*
+- `type` can be either `"sports"` or `"cruiser"` *(for bikes)*
+- Model names contain only lowercase English letters and numbers.
+
+---
+
+### **Sample Test Cases:**
+
+---
+
+**Test Case 1 (Basic Test with One Car and One Bike)**
+
+**Input:**
+
+```
+2
+car swift 45 20 5
+bike ninja 650 25 sports
+```
+
+**Output:**
+
+```
+Vehicle Type: Car
+Model: swift
+Fuel Capacity: 45 L
+Mileage: 20 km/l
+Seating Capacity: 5
+
+Vehicle Type: Bike
+Model: ninja
+Engine Capacity: 650 cc
+Mileage: 25 km/l
+Type: sports
+```
+
+**Explanation:**
+
+Car `swift` has fuel capacity `45L`, mileage `20 km/l`, seating for `5`.
+
+Bike `ninja` has engine capacity `650cc`, mileage `25 km/l`, type `sports`.
+
+---
+
+**Test Case 2 (Multiple Vehicles)**
+
+**Input:**
+
+```
+3
+car tesla 80 30 5
+bike ducati 1200 18 sports
+car bmw 60 22 4
+```
+
+**Output:**
+
+```
+Vehicle Type: Car
+Model: tesla
+Fuel Capacity: 80 L
+Mileage: 30 km/l
+Seating Capacity: 5
+
+Vehicle Type: Bike
+Model: ducati
+Engine Capacity: 1200 cc
+Mileage: 18 km/l
+Type: sports
+
+Vehicle Type: Car
+Model: bmw
+Fuel Capacity: 60 L
+Mileage: 22 km/l
+Seating Capacity: 4
+```
+
+**Explanation:**
+
+Car `tesla` has `80L` fuel capacity, `30 km/l` mileage, `5 seats`.
+
+Bike `ducati` has `1200cc` engine, `18 km/l` mileage, type `sports`.
+
+Car `bmw` has `60L` fuel capacity, `22 km/l` mileage, `4 seats`.
+
+---
+
+**Test Case 3 (Edge Case with Maximum Constraints)**
+
+**Input:**
+
+```
+2
+bike pulsar 2000 50 cruiser
+car ford 100 10 7
+```
+
+**Output:**
+
+```
+Vehicle Type: Bike
+Model: pulsar
+Engine Capacity: 2000 cc
+Mileage: 50 km/l
+Type: cruiser
+
+Vehicle Type: Car
+Model: ford
+Fuel Capacity: 100 L
+Mileage: 10 km/l
+Seating Capacity: 7
+```
+
+**Explanation:**
+
+Bike `pulsar` has maximum engine capacity (`2000cc`) and highest mileage (`50 km/l`).
+
+Car `ford` has maximum fuel capacity (`100L`) and seating capacity (`7 seats`).
+
+---
+---
+
+## **Problem 8: Appliance Inventory System**
+
+You're building an inventory system for a home appliance store. The store has two types of appliances: **Washing Machines** and **Refrigerators**.
+
+Each appliance has a **model name**. You need to store their respective details and then display the information for all appliances entered.
+
+---
+
+### **Input Format**
+
+- First line: An integer `N` (number of appliances)
+- Next `N` lines: For each appliance:
+    - First value: Appliance type (`washing_machine` or `refrigerator`)
+    - Next values:
+        - For `washing_machine`: `model_name drum_size wash_modes spin_speed`
+        - For `refrigerator`: `model_name capacity door_type energy_rating`
+
+---
+
+### **Constraints**
+
+```
+1 ≤ N ≤ 100 (Number of appliances)
+
+5 ≤ drum_size ≤ 20 (in kg, for washing machines)
+2 ≤ wash_modes ≤ 15 (for washing machines)
+500 ≤ spin_speed ≤ 2000 (in RPM, for washing machines)
+
+100 ≤ capacity ≤ 600 (in liters, for refrigerators)
+door_type ∈ { "single", "double" } (for refrigerators)
+1 ≤ energy_rating ≤ 5 (stars)
+```
+
+Model names contain only lowercase English letters and numbers.
+
+---
+
+### **Output Format**
+
+For each appliance, print the following info:
+
+- Appliance Type
+- Model Name
+- (Washing Machine): Drum Size, Wash Modes, Spin Speed
+- (Refrigerator): Capacity, Door Type, Energy Rating
+
+---
+
+### **Sample Input**
+
+```
+3
+washing_machine whirlpoolx 7 10 1200
+refrigerator samsungcool 350 double 4
+washing_machine lgsmartwash 8 12 1400
+
+```
+
+---
+
+### **Sample Output**
+
+```
+Appliance Type: Washing Machine
+Model: whirlpoolx
+Drum Size: 7 kg
+Wash Modes: 10
+Spin Speed: 1200 RPM
+
+Appliance Type: Refrigerator
+Model: samsungcool
+Capacity: 350 L
+Door Type: double
+Energy Rating: 4 stars
+
+Appliance Type: Washing Machine
+Model: lgsmartwash
+Drum Size: 8 kg
+Wash Modes: 12
+Spin Speed: 1400 RPM
+
+```
+
+---
+
+---
+
+## **Problem 9: Electronic Gadget Inventory System**
+
+You're managing inventory for a store that sells two types of gadgets: **Laptops** and **Smartphones**.
+
+Each gadget has a model name and other respective attributes. Your task is to store the details and display them.
+
+---
+
+### **Input Format**
+
+- First line: An integer `N` (number of gadgets)
+- Next `N` lines: For each gadget:
+    - First value: Gadget type (`laptop` or `smartphone`)
+    - Next values:
+        - For `laptop`: `model_name ram_size storage_size battery_backup`
+        - For `smartphone`: `model_name camera_megapixel screen_size battery_capacity`
+
+---
+
+### **Constraints**
+
+```
+1 ≤ N ≤ 100
+
+4 ≤ ram_size ≤ 64 (in GB)
+128 ≤ storage_size ≤ 2048 (in GB)
+2 ≤ battery_backup ≤ 12 (in hours)
+
+8 ≤ camera_megapixel ≤ 108
+4 ≤ screen_size ≤ 7 (in inches)
+2000 ≤ battery_capacity ≤ 6000 (in mAh)
+```
+
+Model names contain only lowercase English letters and numbers.
+
+---
+
+### **Sample Input**
+
+```
+2
+laptop dellxps 16 512 10
+smartphone redmi12 50 6 5000
+```
+
+---
+
+### **Sample Output**
+
+```
+Gadget Type: Laptop
+Model: dellxps
+RAM Size: 16 GB
+Storage: 512 GB
+Battery Backup: 10 hours
+
+Gadget Type: Smartphone
+Model: redmi12
+Camera: 50 MP
+Screen Size: 6 inches
+Battery Capacity: 5000 mAh
+```
+
+---
+---
+
+## **Problem 10: Course Management System**
+
+Create a system to manage two types of courses: **Online** and **Offline**.
+
+---
+
+### **Input Format**
+
+- First line: An integer `N` (number of courses)
+- Next `N` lines: For each course:
+    - First value: Course type (`online` or `offline`)
+    - Next values:
+        - For `online`: `title duration platform`
+        - For `offline`: `title duration location room_number`
+
+---
+
+### **Constraints**
+
+```
+1 ≤ N ≤ 100
+
+1 ≤ duration ≤ 52 (in weeks)
+
+platform ∈ { "coursera", "edx", "udemy", "udacity" }
+location: only lowercase English characters
+room_number: string of digits and letters (e.g., A101, B5, etc.)
+```
+
+Course title contains only lowercase letters and underscores.
+
+---
+
+### **Sample Input**
+
+```
+2
+online python_basics 6 coursera
+offline cpp_advance 10 buildinga A101
+```
+
+---
+
+### **Sample Output**
+Course Type: Online
+Title: python_basics
+Duration: 6 weeks
+Platform: coursera
+
+Course Type: Offline
+Title: cpp_advance
+Duration: 10 weeks
+Location: buildinga
+Room: A101
